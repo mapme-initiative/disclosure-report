@@ -23,7 +23,7 @@ aoi_size <- tribble(
   "F", 10000,
   "G", 5000,
   "H", 10000,
-  "default", 10000
+  "default", 20000
 )
 ######################## leave untouched from here #############################
 tar_option_set(
