@@ -1,0 +1,22 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+.Random.seed|object|ec98239dd96723a2|||||||||||||||
+aoi_size|object|ba48f287b071b0c3|||||||||||||||
+calc_significance|function|e99bbabe00b22f03|||||||||||||||
+classify_significance|function|708cc0add8485402|||||||||||||||
+data|stem|5f59bc3d8ca95950|e8fd86698e8e4785|a847d69dac44b7f6|33550471||t20021.3213344172s|e696ee9fe97dbeda|2450114|rds|local|vector|||4.221||
+indicator_output|stem|4a0138d215333602|7389656715557b72|caae7ee8e9391893|1700813690|./data/aoi_indicators.gpkg|t20021.4014069894s|dd1a682ada1a4e6d|4710400|file|local|vector|||0.665|Indicator org_geometry contained no valid values. Dropping it from the output.|
+indicators|stem|7c544aa8fa5c0bd9|4c5a8d9b2749712d|382ddf9a785d920b|413282081||t20021.3573071121s|5c7fe74fb5bf7fa2|2460321|rds|local|vector|||138.409|GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.aux.xml 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.aux 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.AUX 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.aux 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.AUX 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.ovr 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.OVR 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.msk 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.MSK 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.XML 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.xml 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.IMD 403. GDAL Message 1 HTTP response code on httpsstaticcontent|
+input|stem|56ee9ef3ca298c39|ab951df6a569f540|20ef0f1213dbc2c2|-1867563021|./data/locations.json|t20021.2867532121s|238dfec3108f5515|54872|file|local|vector|||2.792||
+input_file|stem|01390defa981604a|7569e0eece6329d5|2c530c1562a7fbd1|1993266094|raw/locations.json|t20003.3287839642s|92eb895377d28cf5|6518860|file|local|vector|||0.301||
+locations|object|f30aa72e52faa3b9|||||||||||||||
+mapme_options|object|9c4462ede7a2385b|||||||||||||||
+nace_column|object|1e37cf66b2ba8ac3|||||||||||||||
+opts|object|c2e606ac9a1a14ae|||||||||||||||
+output|object|f52aaef104612132|||||||||||||||
+poly_signficiance|function|13e129741ec95d1c|||||||||||||||
+prepare_locations|function|a0145b751b21fd0e|||||||||||||||
+run_mapme|function|dacaefc9955798c3|||||||||||||||
+run_mapme_indicators|function|9882a8606a88e305|||||||||||||||
+significance|stem|e6d07ac3f34c29c1|888c86ed50c3f4d9|82900a6e90f02c5b|-425328363||t20021.4020056763s|2dbc709510ab8b60|2451423|rds|local|vector|||8.401||
+significance_output|stem|e6d07ac3f34c29c1|fc18af30888005a3|4f5b297e4f2b32fa|-1584830383||t20021.4044853289s|2dbc709510ab8b60|2451423|rds|local|vector|||0.043||
+star_significance|function|8e1a355ab7937158|||||||||||||||

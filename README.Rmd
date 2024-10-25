@@ -1,0 +1,30 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+Sys.setenv(OPENSSL_CONF="/dev/null")
+```
+
+# disclosure-report
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+<!-- badges: end -->
+
+
+```{r, results = "asis", echo=FALSE}
+cat(c("```mermaid", targets::tar_mermaid(targets_only = TRUE), "```"), sep = "\n")
+```
+
+
+
+```shell
+$ Rscript -e 'targets::tar_make()'
+```
