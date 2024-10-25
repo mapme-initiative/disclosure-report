@@ -29,6 +29,7 @@ aoi_size <- tribble(
 tar_option_set(
   packages = c(
     "sf",
+    "dplyr",
     "tibble",
     "future",
     "progressr",
