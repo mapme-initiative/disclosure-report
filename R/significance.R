@@ -31,7 +31,7 @@ star_significance <- function(x, what = c("abatement", "restoration")) {
     "abatement",  0.05, "low",
     "abatement",  0.15, "medium",
     "restoration", 0.02, "low",
-    "restoration", 0.05, "high"
+    "restoration", 0.05, "medium"
   )
 
   tmp <- dplyr::filter(vals, layer == {{what}}) |>
