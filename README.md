@@ -19,22 +19,19 @@ graph LR
   style Graph fill:#FFFFFF00,stroke:#000000;
   subgraph Legend
     direction LR
-    xf1522833a4d242c5([""Up to date""]):::uptodate --- x2db1ec7a48f65a9b([""Outdated""]):::outdated
-    x2db1ec7a48f65a9b([""Outdated""]):::outdated --- xd03d7c7dd2ddda2b([""Stem""]):::none
+    xf1522833a4d242c5([""Up to date""]):::uptodate --- xd03d7c7dd2ddda2b([""Stem""]):::none
   end
   subgraph Graph
     direction LR
-    xa538c4711b193115(["significance"]):::outdated --> x21a9e021e2a8eb5c(["significance_output"]):::outdated
-    x148bea66679381e8(["indicators"]):::uptodate --> xa538c4711b193115(["significance"]):::outdated
-    x148bea66679381e8(["indicators"]):::uptodate --> xd7196846cd1935c0(["indicator_output"]):::outdated
+    xa538c4711b193115(["significance"]):::uptodate --> x21a9e021e2a8eb5c(["significance_output"]):::uptodate
+    x148bea66679381e8(["indicators"]):::uptodate --> xa538c4711b193115(["significance"]):::uptodate
+    x148bea66679381e8(["indicators"]):::uptodate --> xd7196846cd1935c0(["indicator_output"]):::uptodate
     x9755545176a05140(["data"]):::uptodate --> x148bea66679381e8(["indicators"]):::uptodate
     x2ee4157c3daee3b7(["input"]):::uptodate --> x9755545176a05140(["data"]):::uptodate
   end
   classDef uptodate stroke:#000000,color:#ffffff,fill:#354823;
-  classDef outdated stroke:#000000,color:#000000,fill:#78B7C5;
   classDef none stroke:#000000,color:#000000,fill:#94a4ac;
   linkStyle 0 stroke-width:0px;
-  linkStyle 1 stroke-width:0px;
 ```
 
 ``` shell
