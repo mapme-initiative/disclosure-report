@@ -26,8 +26,8 @@ the regard of calculating the required indicators for entire portfolios using
 
 The key part of this pipeline is that you can customize the area of influence 
 (or buffer zones) to be used for your locations. For this, you need to
-change the values of the variables `nace_column` and `aoi_size` you can find
-in the header of [`_targets.R`](_targets.R). `nace_column` identifies the 
+change the values of the variables `code_column` and `aoi_size` you can find
+in the header of [`_targets.R`](_targets.R). `code_column` identifies the 
 column in the input data to be linked via the `code` column in `aoi_size` 
 to an associated buffer size. Note, that codes not present in `aoi_size` will
 be encoded with the `default` value.
@@ -61,6 +61,7 @@ Below you can find the visualisation of the pipeline's targets (note, this requi
 the `proximity-indicators` branch of `mapme.biodiversity` to be installed):
 
 ```{r, results = "asis", echo=FALSE, message=FALSE}
+library(visNetwork)
 cat(c("```mermaid", targets::tar_mermaid(targets_only = TRUE), "```"), sep = "\n")
 ```
 
