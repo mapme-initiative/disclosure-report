@@ -1,17 +1,54 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# disclosure-report
-
 <!-- badges: start -->
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-Skipping install of ‘mapme.biodiversity’ from a github remote, the SHA1
-(5ad979a8) has not changed since last install. Use `force = TRUE` to
-force installation
+# disclosure-report
+
+This repository contains code that mimics [IBAT’s disclosure preparation
+report](https://www.ibat-alliance.org/sample-downloads). While we do not
+produce PDF reports here, we go beyond IBAT’s functionality in the
+regard of calculating the required indicators for entire portfolios
+using
+[`mapme.bidiversity`](https://github.com/mapme-initiative/mapme.biodiversity).
+
+The key part of this pipeline is that you can customize the area of
+influence (or buffer zones) to be used for your locations. For this, you
+need to change the values of the variables `nace_column` and `aoi_size`
+you can find in the header of [`_targets.R`](_targets.R). `nace_column`
+identifies the column in the input data to be linked via the `code`
+column in `aoi_size` to an associated buffer size. Note, that codes not
+present in `aoi_size` will be encoded with the `default` value.
+
+The pipeline then calculates the respective indicators within the area
+of influence for each location. These are: - proximity to protected
+areas - proximity to key biodiversity areas - number of threatened
+species - maximum value of STAR layers threat abatement and restoration
+
+These are individually scored to their biodiversity significance in
+accordance to the IBAT workflow. A site also receives a total
+biodiversity significance score equal to the highest score of the
+individual components (none, low, medium, and high).
+
+The codes are structured in the following way: -
+[`inputs.R`](R/inputs.R): read inputs and calculate area of influence -
+[`mapme.R`](R/mapme.R): calculate the required indicators -
+[`significance.R`](R/significance.R): calculation of significance scores
+
+To run the pipeline, adjust [`_targets.R`](_targets.R) to point towards
+your input file and run the following from a shell:
+
+``` shell
+$ Rscript -e 'targets::tar_make()'
+```
+
+Below you can find the visualisation of the pipeline’s targets (note,
+this requires the `proximity-indicators` branch of `mapme.biodiversity`
+to be installed):
 
 ``` mermaid
 graph LR
@@ -32,8 +69,4 @@ graph LR
   classDef uptodate stroke:#000000,color:#ffffff,fill:#354823;
   classDef none stroke:#000000,color:#000000,fill:#94a4ac;
   linkStyle 0 stroke-width:0px;
-```
-
-``` shell
-$ Rscript -e 'targets::tar_make()'
 ```
