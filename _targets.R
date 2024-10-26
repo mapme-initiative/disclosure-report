@@ -1,12 +1,13 @@
 # remotes::install_version("sf", version = "1.0-17", type = "source")
-suppressMessages(remotes::install_github("mapme-initiative/mapme.biodiversity", ref = "proximity-indicators"))
+# remotes::install_github("mapme-initiative/mapme.biodiversity", ref = "proximity-indicators")
+renv::activate()
 library(targets)
 library(tibble)
 ####################### adjust the following inputs ############################
 dir.create("data", showWarnings = FALSE)
 locations <- "./data/locations.json"
 output <-  "./data/locations_biodiversity_significance.gpkg"
-nace_column <- "nace_level"
+code_column <- "nace_level"
 opts <- list(
   datadir = "/home/rstudio/mapme/data",
   rawdir = "/home/rstudio/mapme/raw",
@@ -33,8 +34,7 @@ tar_option_set(
     "tibble",
     "future",
     "progressr",
-    "mapme.biodiversity",
-    "mapme.pipelines"
+    "mapme.biodiversity"
   )
 )
 
@@ -48,7 +48,7 @@ list(
   ),
   tar_target(
     name = data,
-    command = prepare_locations(input, column = nace_column, aoi_size = aoi_size),
+    command = prepare_locations(input, column = code_column, aoi_size = aoi_size),
   ),
   tar_target(
     name = indicators,
