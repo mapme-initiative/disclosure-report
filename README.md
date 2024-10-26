@@ -25,19 +25,24 @@ column in `aoi_size` to an associated buffer size. Note, that codes not
 present in `aoi_size` will be encoded with the `default` value.
 
 The pipeline then calculates the respective indicators within the area
-of influence for each location. These are: - proximity to protected
-areas - proximity to key biodiversity areas - number of threatened
-species - maximum value of STAR layers threat abatement and restoration
+of influence for each location. These are:
+
+- proximity to protected areas
+- proximity to key biodiversity areas
+- number of threatened species
+- maximum value of STAR layers threat abatement and restoration
 
 These are individually scored to their biodiversity significance in
 accordance to the IBAT workflow. A site also receives a total
 biodiversity significance score equal to the highest score of the
 individual components (none, low, medium, and high).
 
-The codes are structured in the following way: -
-[`inputs.R`](R/inputs.R): read inputs and calculate area of influence -
-[`mapme.R`](R/mapme.R): calculate the required indicators -
-[`significance.R`](R/significance.R): calculation of significance scores
+The codes are structured in the following way:
+
+- [`inputs.R`](R/inputs.R): read inputs and calculate area of influence
+- [`mapme.R`](R/mapme.R): calculate the required indicators
+- [`significance.R`](R/significance.R): calculation of significance
+  scores
 
 To run the pipeline, adjust [`_targets.R`](_targets.R) to point towards
 your input file and run the following from a shell:

@@ -34,6 +34,7 @@ be encoded with the `default` value.
 
 The pipeline then calculates the respective indicators within the area of influence 
 for each location. These are:
+
 - proximity to protected areas
 - proximity to key biodiversity areas
 - number of threatened species
@@ -44,6 +45,7 @@ to the IBAT workflow. A site also receives a total biodiversity significance sco
 equal to the highest score of the individual components (none, low, medium, and high).
 
 The codes are structured in the following way:
+
 - [`inputs.R`](R/inputs.R): read inputs and calculate area of influence
 - [`mapme.R`](R/mapme.R): calculate the required indicators
 - [`significance.R`](R/significance.R): calculation of significance scores
