@@ -65,5 +65,3 @@ library(visNetwork)
 cat(c("```mermaid", targets::tar_mermaid(targets_only = TRUE), "```"), sep = "\n")
 ```
 
-
-

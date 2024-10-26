@@ -3,11 +3,12 @@ run_mapme <- function(
     opts) {
 
   mapme_options(outdir = opts$datadir)
-  get_resources(data,
-                get_wdpa(version = "Oct2024"),
-                get_key_biodiversity_areas(path = file.path(opts$rawdir, "kbas.gpkg")),
-                get_iucn(paths = list.files(path  = opts$rawdir, pattern = "Combined_THR_SR_2023*", full.names = TRUE)),
-                get_star(layer = "both"))
+  get_resources(
+    data,
+    get_wdpa(version = "Oct2024"),
+    get_key_biodiversity_areas(path = file.path(opts$rawdir, "kbas.gpkg")),
+    get_iucn(paths = list.files(path  = opts$rawdir, pattern = "Combined_THR_SR_2023*", full.names = TRUE)),
+    get_star(layer = "both"))
 
   if(interactive()) p <- multisession else p <- multicore
   plan(p, workers = opts$max_cores)
