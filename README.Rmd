@@ -19,7 +19,9 @@ Sys.setenv(OPENSSL_CONF="/dev/null")
 
 # disclosure-report
 
-This repository contains code that mimics [IBAT's disclosure preparation report](https://www.ibat-alliance.org/sample-downloads).
+This repository contains code that mimics [IBAT's disclosure preparation report](https://www.ibat-alliance.org/sample-downloads) as a reproducible 
+[`{targets}`](https://books.ropensci.org/targets/) pipeline.
+
 While we do not produce PDF reports here, we go beyond IBAT's functionality in
 the regard of calculating the required indicators for entire portfolios using
 [`mapme.bidiversity`](https://github.com/mapme-initiative/mapme.biodiversity).
@@ -58,7 +60,8 @@ $ Rscript -e 'targets::tar_make()'
 ```
 
 Below you can find the visualisation of the pipeline's targets (note, this requires
-the `proximity-indicators` branch of `mapme.biodiversity` to be installed):
+the [`proximity-indicators`](https://github.com/mapme-initiative/mapme.biodiversity/tree/proximity-indicators) 
+branch of `mapme.biodiversity` to be installed):
 
 ```{r, results = "asis", echo=FALSE, message=FALSE}
 library(visNetwork)

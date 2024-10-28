@@ -10,10 +10,13 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 # disclosure-report
 
 This repository contains code that mimics [IBAT’s disclosure preparation
-report](https://www.ibat-alliance.org/sample-downloads). While we do not
-produce PDF reports here, we go beyond IBAT’s functionality in the
-regard of calculating the required indicators for entire portfolios
-using
+report](https://www.ibat-alliance.org/sample-downloads) as a
+reproducible [`{targets}`](https://books.ropensci.org/targets/)
+pipeline.
+
+While we do not produce PDF reports here, we go beyond IBAT’s
+functionality in the regard of calculating the required indicators for
+entire portfolios using
 [`mapme.bidiversity`](https://github.com/mapme-initiative/mapme.biodiversity).
 
 The key part of this pipeline is that you can customize the area of
@@ -52,8 +55,9 @@ $ Rscript -e 'targets::tar_make()'
 ```
 
 Below you can find the visualisation of the pipeline’s targets (note,
-this requires the `proximity-indicators` branch of `mapme.biodiversity`
-to be installed):
+this requires the
+[`proximity-indicators`](https://github.com/mapme-initiative/mapme.biodiversity/tree/proximity-indicators)
+branch of `mapme.biodiversity` to be installed):
 
 ``` mermaid
 graph LR
