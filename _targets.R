@@ -1,6 +1,6 @@
 # remotes::install_version("sf", version = "1.0-17", type = "source")
 # remotes::install_github("mapme-initiative/mapme.biodiversity", ref = "proximity-indicators")
-renv::activate()
+# renv::activate()
 library(targets)
 library(tibble)
 ####################### adjust the following inputs ############################
@@ -9,8 +9,8 @@ locations <- "./data/locations.json"
 output <-  "./data/locations_biodiversity_significance.gpkg"
 code_column <- "nace_level"
 opts <- list(
-  datadir = "/home/rstudio/mapme/data",
-  rawdir = "/home/rstudio/mapme/raw",
+  datadir = "/vsiaz/mapme-data",
+  rawdir = "/vsiaz/mapme-data/raw",
   max_cores = 10
 )
 

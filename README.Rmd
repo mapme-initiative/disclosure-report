@@ -26,6 +26,11 @@ While we do not produce PDF reports here, we go beyond IBAT's functionality in
 the regard of calculating the required indicators for entire portfolios using
 [`mapme.bidiversity`](https://github.com/mapme-initiative/mapme.biodiversity).
 
+The required inputs are:
+
+- `data/locations.json`: An input file representing project locations with
+attributes available to spefiy the area of influence (see below).
+
 The key part of this pipeline is that you can customize the area of influence 
 (or buffer zones) to be used for your locations. For this, you need to
 change the values of the variables `code_column` and `aoi_size` you can find

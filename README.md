@@ -19,6 +19,11 @@ functionality in the regard of calculating the required indicators for
 entire portfolios using
 [`mapme.bidiversity`](https://github.com/mapme-initiative/mapme.biodiversity).
 
+The required inputs are:
+
+- `data/locations.json`: An input file representing project locations
+  with attributes available to spefiy the area of influence (see below).
+
 The key part of this pipeline is that you can customize the area of
 influence (or buffer zones) to be used for your locations. For this, you
 need to change the values of the variables `code_column` and `aoi_size`
@@ -65,17 +70,17 @@ graph LR
   style Graph fill:#FFFFFF00,stroke:#000000;
   subgraph Legend
     direction LR
-    xf1522833a4d242c5([""Up to date""]):::uptodate --- xd03d7c7dd2ddda2b([""Stem""]):::none
+    x2db1ec7a48f65a9b([""Outdated""]):::outdated --- xd03d7c7dd2ddda2b([""Stem""]):::none
   end
   subgraph Graph
     direction LR
-    xa538c4711b193115(["significance"]):::uptodate --> x21a9e021e2a8eb5c(["significance_output"]):::uptodate
-    x148bea66679381e8(["indicators"]):::uptodate --> xa538c4711b193115(["significance"]):::uptodate
-    x148bea66679381e8(["indicators"]):::uptodate --> xd7196846cd1935c0(["indicator_output"]):::uptodate
-    x9755545176a05140(["data"]):::uptodate --> x148bea66679381e8(["indicators"]):::uptodate
-    x2ee4157c3daee3b7(["input"]):::uptodate --> x9755545176a05140(["data"]):::uptodate
+    xa538c4711b193115(["significance"]):::outdated --> x21a9e021e2a8eb5c(["significance_output"]):::outdated
+    x148bea66679381e8(["indicators"]):::outdated --> xa538c4711b193115(["significance"]):::outdated
+    x148bea66679381e8(["indicators"]):::outdated --> xd7196846cd1935c0(["indicator_output"]):::outdated
+    x9755545176a05140(["data"]):::outdated --> x148bea66679381e8(["indicators"]):::outdated
+    x2ee4157c3daee3b7(["input"]):::outdated --> x9755545176a05140(["data"]):::outdated
   end
-  classDef uptodate stroke:#000000,color:#ffffff,fill:#354823;
+  classDef outdated stroke:#000000,color:#000000,fill:#78B7C5;
   classDef none stroke:#000000,color:#000000,fill:#94a4ac;
   linkStyle 0 stroke-width:0px;
 ```

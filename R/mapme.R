@@ -7,8 +7,9 @@ run_mapme <- function(
     data,
     get_wdpa(version = "Oct2024"),
     get_key_biodiversity_areas(path = file.path(opts$rawdir, "kbas.gpkg")),
-    get_iucn(paths = list.files(path  = opts$rawdir, pattern = "Combined_THR_SR_2023*", full.names = TRUE)),
-    get_star(layer = "both"))
+    get_iucn(paths = file.path(opts$rawdir, "Combined_THR_SR_2023.tif")),
+    get_star(layer = "both")
+    )
 
   if(interactive()) p <- multisession else p <- multicore
   plan(p, workers = opts$max_cores)

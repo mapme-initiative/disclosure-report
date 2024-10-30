@@ -4,20 +4,20 @@ aoi_size|object|8d3961b23ab79f6a|||||||||||||||
 calc_significance|function|93c9ff78effa030d|||||||||||||||
 classify_significance|function|708cc0add8485402|||||||||||||||
 code_column|object|1e37cf66b2ba8ac3|||||||||||||||
-data|stem|5a8d34c18a582700|3eab0b6d4d9477e9|b16e42fdcb99ce05|33550471||t20022.3253080144s|dc13db39dee5fdd5|2459507|rds|local|vector|||4.206||
+data|stem|8d2ab848fdaaeae5|3eab0b6d4d9477e9|3b95e663cd4f6ef2|33550471||t20026.3324301898s|771f01d615397b5a|827247|rds|local|vector|||1.96||
 indicator_output|stem|e1cfa9ae4e149229|7389656715557b72|c86c7ed753345804|1700813690|./data/aoi_indicators.gpkg|t20021.7124228011s|c379df1c30f1679f|4816896|file|local|vector|||0.663|Indicator org_geometry contained no valid values. Dropping it from the output.|
-indicators|stem|2b3b30e4220a2121|4c5a8d9b2749712d|d984eae6bca93692|413282081||t20021.7123155819s|2c34863de1e4e0e2|2470346|rds|local|vector|||145.016|GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.aux.xml 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.aux 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.AUX 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.aux 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.AUX 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.ovr 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.OVR 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.msk 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.tif.MSK 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.XML 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.xml 403. GDAL Message 1 HTTP response code on httpsstaticcontent.springer.comesmart3A10.10382Fs41559021014320MediaObjects41559_2021_1432_MOESM4_ESM.IMD 403. GDAL Message 1 HTTP response code on httpsstaticcontent|
-input|stem|56ee9ef3ca298c39|ab951df6a569f540|20ef0f1213dbc2c2|-1867563021|./data/locations.json|t20021.2867532121s|238dfec3108f5515|54872|file|local|vector|||2.792||
+indicators|stem|51c7598c3596fe83|4c5a8d9b2749712d|9d2a6585ddf7af02|413282081||t20026.421162906s|b7be6b8ac0f1ad9e|829657|rds|local|vector|||298.079|.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .|
+input|stem|154f5e9b73061927|ab951df6a569f540|20ef0f1213dbc2c2|-1867563021|./data/locations.json|t20026.3109717108s|b16f26d45452b660|90636|file|local|vector|||4.056||
 input_file|stem|01390defa981604a|7569e0eece6329d5|2c530c1562a7fbd1|1993266094|raw/locations.json|t20003.3287839642s|92eb895377d28cf5|6518860|file|local|vector|||0.301||
 locations|object|f30aa72e52faa3b9|||||||||||||||
 mapme_options|object|9c4462ede7a2385b|||||||||||||||
 nace_column|object|1e37cf66b2ba8ac3|||||||||||||||
-opts|object|c2e606ac9a1a14ae|||||||||||||||
+opts|object|7a85d5b26e66cabd|||||||||||||||
 output|object|f52aaef104612132|||||||||||||||
 poly_signficiance|function|13e129741ec95d1c|||||||||||||||
 prepare_locations|function|a0145b751b21fd0e|||||||||||||||
-run_mapme|function|dacaefc9955798c3|||||||||||||||
+run_mapme|function|eb317ee3d1ffc303|||||||||||||||
 run_mapme_indicators|function|9882a8606a88e305|||||||||||||||
-significance|stem|7008ee79678567c9|888c86ed50c3f4d9|74d75fe3c1ef8f57|-425328363||t20021.712414931s|87ec7601441350d2|2461545|rds|local|vector|||8.392||
+significance|stem|7008ee79678567c9|888c86ed50c3f4d9|2337b952854024bc|-425328363||t20021.712414931s||2461545|rds|local|vector|||0.776|Unknown or uninitialised column star.|Assigned data value must be compatible with existing data. Existing data has 120 rows. Assigned data has 0 rows.ℹ Only vectors of size 1 are recycled.Caused by error in vectbl_recycle_rhs_rows Cant recycle input of size 0 to size 120.
 significance_output|stem|7008ee79678567c9|fc18af30888005a3|43ff5632289d76f0|-1584830383||t20021.7124257177s|87ec7601441350d2|2461545|rds|local|vector|||0.068||
 star_significance|function|39349e7b3804faf7|||||||||||||||
