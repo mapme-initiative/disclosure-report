@@ -590,14 +590,9 @@
     "mapme.biodiversity": {
       "Package": "mapme.biodiversity",
       "Version": "0.9.3.9000",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "mapme.biodiversity",
-      "RemoteUsername": "mapme-initiative",
-      "RemotePkgRef": "mapme-initiative/mapme.biodiversity@5ad979a80652847220cd572f1d67e0c2e6a4a608",
-      "RemoteRef": "5ad979a80652847220cd572f1d67e0c2e6a4a608",
-      "RemoteSha": "5ad979a80652847220cd572f1d67e0c2e6a4a608",
+      "Source": "Local",
+      "RemoteType": "local",
+      "RemoteUrl": "../pkgs/mapme.biodiversity",
       "Requirements": [
         "R",
         "dplyr",
@@ -611,7 +606,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "435e20aba3ac2108d7f928e83a5a0237"
+      "Hash": "89c9d36de2a9783040f063b5b00e78c8"
     },
     "memoise": {
       "Package": "memoise",
