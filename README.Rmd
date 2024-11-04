@@ -17,6 +17,12 @@ Sys.setenv(OPENSSL_CONF="/dev/null")
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
+
+> [!IMPORTANT]  
+> This pipelines requires the [`proximity-indicators`](https://github.com/mapme-initiative/mapme.biodiversity/tree/proximity-indicators) 
+> branch of `mapme.biodiversity` to be installed.
+
+
 # disclosure-report
 
 This repository contains code that mimics [IBAT's disclosure preparation report](https://www.ibat-alliance.org/sample-downloads) as a reproducible 
@@ -64,9 +70,7 @@ input file and run the following from a shell:
 $ Rscript -e 'targets::tar_make()'
 ```
 
-Below you can find the visualisation of the pipeline's targets (note, this requires
-the [`proximity-indicators`](https://github.com/mapme-initiative/mapme.biodiversity/tree/proximity-indicators) 
-branch of `mapme.biodiversity` to be installed):
+Below you can find the visualisation of the pipeline's targets:
 
 ```{r, results = "asis", echo=FALSE, message=FALSE}
 library(visNetwork)

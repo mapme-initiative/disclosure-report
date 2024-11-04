@@ -7,6 +7,11 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
+> \[!IMPORTANT\]  
+> This pipelines requires the
+> [`proximity-indicators`](https://github.com/mapme-initiative/mapme.biodiversity/tree/proximity-indicators)
+> branch of `mapme.biodiversity` to be installed.
+
 # disclosure-report
 
 This repository contains code that mimics [IBAT’s disclosure preparation
@@ -59,10 +64,7 @@ your input file and run the following from a shell:
 $ Rscript -e 'targets::tar_make()'
 ```
 
-Below you can find the visualisation of the pipeline’s targets (note,
-this requires the
-[`proximity-indicators`](https://github.com/mapme-initiative/mapme.biodiversity/tree/proximity-indicators)
-branch of `mapme.biodiversity` to be installed):
+Below you can find the visualisation of the pipeline’s targets:
 
 ``` mermaid
 graph LR
