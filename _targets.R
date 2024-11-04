@@ -1,6 +1,7 @@
 # remotes::install_version("sf", version = "1.0-17", type = "source")
 # remotes::install_github("mapme-initiative/mapme.biodiversity", ref = "proximity-indicators")
 # renv::activate()
+renv::restore()
 library(targets)
 library(tibble)
 ####################### adjust the following inputs ############################
