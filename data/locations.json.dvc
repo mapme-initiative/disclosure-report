@@ -1,0 +1,5 @@
+outs:
+- md5: e52bcf3614a0f902cff939cbb29cfafb
+  size: 84733
+  hash: md5
+  path: locations.json

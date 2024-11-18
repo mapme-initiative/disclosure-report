@@ -1,0 +1,6 @@
+outs:
+- md5: 75bbfd4981b4a5508da62953e2b7cd63.dir
+  size: 4732741
+  nfiles: 9
+  hash: md5
+  path: _targets

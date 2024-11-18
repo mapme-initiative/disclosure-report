@@ -1,7 +1,8 @@
-# remotes::install_version("sf", version = "1.0-17", type = "source")
+# remotes::install_version("sf", version = "1.0-19", type = "source")
 # remotes::install_github("mapme-initiative/mapme.biodiversity", ref = "proximity-indicators")
 # renv::install("../pkgs/mapme.biodiversity", dependencies = FALSE)
 renv::restore()
+library(remotes) # for renv to be available
 library(targets)
 library(tibble)
 ####################### adjust the following inputs ############################
@@ -12,7 +13,7 @@ code_column <- "nace_level"
 opts <- list(
   datadir = "/vsiaz/mapme-data",
   rawdir = "/vsiaz/mapme-data/raw",
-  max_cores = 10
+  max_cores = 4
 )
 
 # https://ec.europa.eu/competition/mergers/cases/index/nace_all.html
@@ -36,6 +37,7 @@ tar_option_set(
     "tibble",
     "future",
     "progressr",
+    "exactextractr",
     "mapme.biodiversity"
   )
 )

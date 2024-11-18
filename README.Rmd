@@ -10,6 +10,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 Sys.setenv(OPENSSL_CONF="/dev/null")
+targets::tar_renv()
 ```
 
 
@@ -68,6 +69,7 @@ To run the pipeline, adjust [`_targets.R`](_targets.R) to point towards your
 input file and run the following from a shell:
 
 ```shell
+$ dvc pull
 $ Rscript -e 'targets::tar_make()'
 ```
 
