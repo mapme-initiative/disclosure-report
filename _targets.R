@@ -69,6 +69,7 @@ list(
   ),
   tar_target(
     name = significance_output,
-    command = write_sf(significance, dsn = output, delete_dsn = TRUE)
+    command = write_gpkg(significance, output),
+    format = "file"
   )
 )

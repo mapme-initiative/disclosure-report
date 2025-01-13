@@ -1,6 +1,6 @@
 poly_signficiance <- function(x, aoi) {
   if(is.null(x)) return("none")
-  dist <- tribble(
+  dist <- tibble::tribble(
     ~ aoi, ~ distance, ~ level,
     5000,  5000, "low",
     10000, 10000, "low",
@@ -26,7 +26,7 @@ star_significance <- function(x, what = c("abatement", "restoration")) {
   if(is.null(x)) return("none")
 
   what <- match.arg(what)
-  vals <- tribble(
+  vals <- tibble::tribble(
     ~ layer, ~ value, ~ level,
     "abatement",  0.05, "low",
     "abatement",  0.15, "medium",
@@ -81,13 +81,18 @@ calc_significance <- function(indicators) {
     dplyr::rowwise() |>
     dplyr::mutate(significance = classify_significance(dplyr::c_across(dplyr::contains("_significance"))))
 
-  indicators <- portfolio_wide(indicators[, -which(names(indicators) == "org_geometry")])
+  indicators <- mapme.biodiversity::portfolio_wide(indicators[, -which(names(indicators) == "org_geometry")])
   names(indicators)[grepl("proximity_wdpa", names(indicators))] <- "proximity_wdpa"
   names(indicators)[grepl("proximity_kba", names(indicators))] <- "proximity_kba"
   names(indicators)[grepl("species_richness", names(indicators))] <- "species_richness"
   names(indicators)[grepl("abatement_max", names(indicators))] <- "abatement_value"
   names(indicators)[grepl("restoration_max", names(indicators))] <- "restoration_value"
+  names(indicators)[grepl("mean_species_abundance", names(indicators))] <- "mean_species_abundance"
+
+  indicators$becs <-
+    as.numeric(units::set_units(sf::st_area(sf::st_sf(indicators)), "km2")) *
+    indicators$mean_species_abundance *
+    log10(indicators$abatement_value * 1000)
 
   indicators
-
 }

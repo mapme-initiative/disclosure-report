@@ -1,5 +1,5 @@
 outs:
-- md5: 293fda3ef75f0f11ae27b715d4ce5a50
+- md5: e0d066cbea0fc1172a6bed434bba62da
   size: 1593344
   hash: md5
   path: locations_biodiversity_significance.gpkg
