@@ -9,7 +9,7 @@ run_mapme <- function(
     get_key_biodiversity_areas(path = file.path(opts$rawdir, "kbas.gpkg")),
     get_iucn(paths = file.path(opts$rawdir, "Combined_THR_SR_2023.tif")),
     get_star(layer = "both"),
-    get_mean_species_abundance(path = file.path(opts$rawdir, "TerrestrialMSA_2015_World_lowres.tif"))
+    get_mean_species_abundance(path = file.path(opts$rawdir, "TerrestrialMSA_2015_World.tif"))
     )
 
   if(interactive()) p <- multisession else p <- multicore

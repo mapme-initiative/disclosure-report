@@ -1,6 +1,6 @@
 outs:
-- md5: 3df2ad76dbeeb478dc3f8973a4c2232a
-  size: 1634304
+- md5: 2d01532ceb75aaeed2cf4447df31536d
+  size: 1683456
   hash: md5
   path: aoi_indicators.gpkg
   isexec: true
