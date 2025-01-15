@@ -59,11 +59,16 @@ These are individually scored to their biodiversity significance in accordance
 to the IBAT workflow. A site also receives a total biodiversity significance score
 equal to the highest score of the individual components (none, low, medium, and high).
 
+The pipeline also computes the [BECS](https://www.thebiodiversityconsultancy.com/fileadmin/uploads/tbc/Documents/Resources/ARTICULATING_AND_ASSESSING_BIODIVERSITY_IMPACT-BIAF.pdf) indicator for each region. The BECS result file contains the indicator
+itself, as well as the numeric variables that make up the indicator for better
+interpretability.
+
 The codes are structured in the following way:
 
 - [`inputs.R`](R/inputs.R): read inputs and calculate area of influence
 - [`mapme.R`](R/mapme.R): calculate the required indicators
 - [`significance.R`](R/significance.R): calculation of significance scores
+- [`becs.R`](R/becs.R): calculation of BECS scores
 
 To run the pipeline, adjust [`_targets.R`](_targets.R) to point towards your
 input file and run the following from a shell:

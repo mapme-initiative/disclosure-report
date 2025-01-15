@@ -8,7 +8,8 @@ library(tibble)
 ####################### adjust the following inputs ############################
 dir.create("data", showWarnings = FALSE)
 locations <- "./data/locations.json"
-output <-  "./data/locations_biodiversity_significance.gpkg"
+output_significance <-  "./data/locations_biodiversity_significance.gpkg"
+output_becs <-  "./data/locations_becs.gpkg"
 code_column <- "nace_level"
 opts <- list(
   datadir = "/vsiaz/mapme-data",
@@ -69,7 +70,16 @@ list(
   ),
   tar_target(
     name = significance_output,
-    command = write_gpkg(significance, output),
+    command = write_gpkg(significance, output_significance),
+    format = "file"
+  ),
+  tar_target(
+    name = becs,
+    command = calc_becs(indicators),
+  ),
+  tar_target(
+    name = becs_output,
+    command = write_gpkg(becs, output_becs),
     format = "file"
   )
 )

@@ -89,10 +89,5 @@ calc_significance <- function(indicators) {
   names(indicators)[grepl("restoration_max", names(indicators))] <- "restoration_value"
   names(indicators)[grepl("mean_species_abundance", names(indicators))] <- "mean_species_abundance"
 
-  indicators$becs <-
-    log10(as.numeric(units::set_units(sf::st_area(sf::st_sf(indicators)), "km2"))) *
-    indicators$mean_species_abundance *
-    log10(indicators$abatement_value * 1000)
-
   indicators
 }

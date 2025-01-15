@@ -51,12 +51,19 @@ accordance to the IBAT workflow. A site also receives a total
 biodiversity significance score equal to the highest score of the
 individual components (none, low, medium, and high).
 
+The pipeline also computes the
+[BECS](https://www.thebiodiversityconsultancy.com/fileadmin/uploads/tbc/Documents/Resources/ARTICULATING_AND_ASSESSING_BIODIVERSITY_IMPACT-BIAF.pdf)
+indicator for each region. The BECS result file contains the indicator
+itself, as well as the numeric variables that make up the indicator for
+better interpretability.
+
 The codes are structured in the following way:
 
 - [`inputs.R`](R/inputs.R): read inputs and calculate area of influence
 - [`mapme.R`](R/mapme.R): calculate the required indicators
 - [`significance.R`](R/significance.R): calculation of significance
   scores
+- [`becs.R`](R/becs.R): calculation of BECS scores
 
 To run the pipeline, adjust [`_targets.R`](_targets.R) to point towards
 your input file and run the following from a shell:
@@ -80,11 +87,13 @@ graph LR
   end
   subgraph Graph
     direction LR
+    xa7183aa068895b4f(["becs"]):::uptodate --> xb6872e3b6bd85635(["becs_output"]):::uptodate
     xa538c4711b193115(["significance"]):::uptodate --> x21a9e021e2a8eb5c(["significance_output"]):::uptodate
     x148bea66679381e8(["indicators"]):::uptodate --> xa538c4711b193115(["significance"]):::uptodate
     x148bea66679381e8(["indicators"]):::uptodate --> xd7196846cd1935c0(["indicator_output"]):::uptodate
     x9755545176a05140(["data"]):::uptodate --> x148bea66679381e8(["indicators"]):::uptodate
     x2ee4157c3daee3b7(["input"]):::uptodate --> x9755545176a05140(["data"]):::uptodate
+    x148bea66679381e8(["indicators"]):::uptodate --> xa7183aa068895b4f(["becs"]):::uptodate
   end
   classDef uptodate stroke:#000000,color:#ffffff,fill:#354823;
   classDef none stroke:#000000,color:#000000,fill:#94a4ac;
