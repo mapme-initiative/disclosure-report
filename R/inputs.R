@@ -1,4 +1,4 @@
-prepare_locations <- function(input, column, aoi_size) {
+prepare_locations_significance <- function(input, column, aoi_size) {
 
   stopifnot(names(aoi_size) == c("code", "size"))
   data <- read_sf(input)
@@ -14,5 +14,9 @@ prepare_locations <- function(input, column, aoi_size) {
   data_buffered$aoi_size  <- buffer_size
   data_buffered$org_geometry <- st_geometry(data)
   data_buffered
+}
 
+prepare_locations_becs <- function(input) {
+  data_becs <- read_sf(input)
+  return(data_becs)
 }

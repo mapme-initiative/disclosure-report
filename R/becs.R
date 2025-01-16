@@ -1,5 +1,5 @@
 calc_becs <- function(indicators) {
-  indicators <- mapme.biodiversity::portfolio_wide(indicators[, -which(names(indicators) == "org_geometry")],
+  indicators <- mapme.biodiversity::portfolio_wide(indicators,
                                                    indicators = c("mean_species_abundance", "star"))
   indicators$proximity_kba <- NULL
   indicators$proximity_wdpa <- NULL

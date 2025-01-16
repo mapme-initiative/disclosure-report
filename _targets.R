@@ -52,21 +52,21 @@ list(
     format = "file"
   ),
   tar_target(
-    name = data,
-    command = prepare_locations(input, column = code_column, aoi_size = aoi_size),
+    name = data_significance,
+    command = prepare_locations_significance(input, column = code_column, aoi_size = aoi_size)
   ),
   tar_target(
-    name = indicators,
-    command = run_mapme(data = data, opts = opts)
-  ) ,
+    name = indicators_significance,
+    command = run_mapme_significance(data = data_significance, opts = opts)
+  ),
   tar_target(
-    name = indicator_output,
-    command = write_portfolio(indicators, dsn = "./data/aoi_indicators.gpkg"),
+    name = indicator_significance_output,
+    command = write_portfolio(indicators_significance, dsn = "./data/aoi_significance_indicators.gpkg"),
     format = "file"
   ),
   tar_target(
     name = significance,
-    command = calc_significance(indicators),
+    command = calc_significance(indicators_significance)
   ),
   tar_target(
     name = significance_output,
@@ -74,8 +74,22 @@ list(
     format = "file"
   ),
   tar_target(
+    name = data_becs,
+    command = prepare_locations_becs(input)
+  ),
+  tar_target(
+    name = indicators_becs,
+    # command = run_mapme_becs(data = data_becs, opts = opts)
+    command = run_mapme_becs(data = data_significance, opts = opts)
+  ),
+  tar_target(
+    name = indicator_becs_output,
+    command = write_portfolio(indicators_becs, dsn = "./data/aoi_becs_indicators.gpkg"),
+    format = "file"
+  ),
+  tar_target(
     name = becs,
-    command = calc_becs(indicators),
+    command = calc_becs(indicators_becs),
   ),
   tar_target(
     name = becs_output,
