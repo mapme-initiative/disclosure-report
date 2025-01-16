@@ -1,0 +1,6 @@
+outs:
+- md5: beb89d00a73a0576232d798547106504
+  size: 1626112
+  isexec: true
+  hash: md5
+  path: aoi_significance_indicators.gpkg

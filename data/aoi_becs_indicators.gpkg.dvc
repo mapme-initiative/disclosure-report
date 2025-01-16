@@ -1,0 +1,6 @@
+outs:
+- md5: 24b3159a2b52a40372d41d9d2aa1d5ae
+  size: 1626112
+  isexec: true
+  hash: md5
+  path: aoi_becs_indicators.gpkg
