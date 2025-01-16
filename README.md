@@ -87,13 +87,16 @@ graph LR
   end
   subgraph Graph
     direction LR
+    x2ee4157c3daee3b7(["input"]):::uptodate --> xe4b00d9ed1f7eb40(["data_becs"]):::uptodate
+    xf32d41696f0fac92(["indicators_significance"]):::uptodate --> x6a9c2c4f3e20a9f1(["indicator_significance_output"]):::uptodate
     xa7183aa068895b4f(["becs"]):::uptodate --> xb6872e3b6bd85635(["becs_output"]):::uptodate
     xa538c4711b193115(["significance"]):::uptodate --> x21a9e021e2a8eb5c(["significance_output"]):::uptodate
-    x148bea66679381e8(["indicators"]):::uptodate --> xa538c4711b193115(["significance"]):::uptodate
-    x148bea66679381e8(["indicators"]):::uptodate --> xd7196846cd1935c0(["indicator_output"]):::uptodate
-    x9755545176a05140(["data"]):::uptodate --> x148bea66679381e8(["indicators"]):::uptodate
-    x2ee4157c3daee3b7(["input"]):::uptodate --> x9755545176a05140(["data"]):::uptodate
-    x148bea66679381e8(["indicators"]):::uptodate --> xa7183aa068895b4f(["becs"]):::uptodate
+    xf32d41696f0fac92(["indicators_significance"]):::uptodate --> xa538c4711b193115(["significance"]):::uptodate
+    x525023cdda67ad49(["indicators_becs"]):::uptodate --> xfbd891b54e8d2e6a(["indicator_becs_output"]):::uptodate
+    x2ee4157c3daee3b7(["input"]):::uptodate --> xfff36268423248d8(["data_significance"]):::uptodate
+    x525023cdda67ad49(["indicators_becs"]):::uptodate --> xa7183aa068895b4f(["becs"]):::uptodate
+    xfff36268423248d8(["data_significance"]):::uptodate --> xf32d41696f0fac92(["indicators_significance"]):::uptodate
+    xfff36268423248d8(["data_significance"]):::uptodate --> x525023cdda67ad49(["indicators_becs"]):::uptodate
   end
   classDef uptodate stroke:#000000,color:#ffffff,fill:#354823;
   classDef none stroke:#000000,color:#000000,fill:#94a4ac;
