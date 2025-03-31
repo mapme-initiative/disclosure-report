@@ -102,3 +102,20 @@ graph LR
   classDef none stroke:#000000,color:#000000,fill:#94a4ac;
   linkStyle 0 stroke-width:0px;
 ```
+
+# Troubleshooting
+
+The input data and any additional auxiliary files are being tracked
+using [`dvc`](https://dvc.org/). To load them on your compute, execute
+`dvc pull` in the terminal.
+
+If this doesn’t work as expected, please check if
+
+- You copied all necessary files from
+  [`dotfiles-dsap`](https://github.com/mapme-initiative/dotfiles-dsap)
+  (e.g. gdal-config, dvc config and .Renviron).
+- You are using a working SAS key with all necessary permissions in your
+  `.Renviron` file.
+- Your SAS key is not expired (they expire after a maximum of 7 days).
+- You restarted RStudio and any terminals running inside your VM after
+  updating your configuration.
